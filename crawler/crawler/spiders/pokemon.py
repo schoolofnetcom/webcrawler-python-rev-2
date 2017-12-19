@@ -26,7 +26,7 @@ class PokemonSpider(scrapy.Spider):
 				'types': types
 			})
 			
-		with open('pokemons.json', 'wb') as f:
+		with open('pokemons.json', 'wb', encoding = "utf8") as f:
 			json.dump(arr, f)
 		# name = response.css('span.infocard-tall .ent-name::text').extract_first()
 		# self.log('Pokemon Name : %s' % name)
